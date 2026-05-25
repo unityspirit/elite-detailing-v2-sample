@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Elite Detailing — Элитный Детейлинг в Пятигорске</title>
+  <meta name="description" content="Премиальный автодетейлинг в Пятигорске. Керамическое покрытие, полировка, PPF-плёнка, химчистка салона. Защитим и преобразим ваш автомобиль.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========= CINEMATIC CANVAS BACKGROUND ========= -->
+  <canvas id="gl-canvas"></canvas>
+
+  <!-- ========= LOADER ========= -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-brand">⚡ ELITE DETAILING</div>
+      <div class="loader-bar-track">
+        <div class="loader-bar-fill" id="loaderBar"></div>
+      </div>
+      <div class="loader-info">
+        <span id="loaderPct">0</span>%
+      </div>
+      <div class="loader-caption" id="loaderCaption">Подготавливаем кинематографический опыт…</div>
+    </div>
+  </div>
+
+  <!-- ========= PROGRESS BAR (thin, bottom) ========= -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <!-- ========= NAVBAR ========= -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" id="navBrand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">ELITE DETAILING</span>
+      </a>
+      <div class="nav-links" id="navLinksDesktop">
+        <a href="#services" class="nav-link" data-scroll="1">Услуги</a>
+        <a href="#process" class="nav-link" data-scroll="2">Процесс</a>
+        <a href="#results" class="nav-link" data-scroll="3">Результаты</a>
+        <a href="#packages" class="nav-link" data-scroll="4">Пакеты</a>
+        <a href="#contact" class="nav-link" data-scroll="5">Контакты</a>
+      </div>
+      <a href="tel:+79001234567" class="nav-cta">+7 (900) 123-45-67</a>
+      <button class="burger" id="navMenuBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========= MOBILE SCRIM + DRAWER ========= -->
+  <div class="nav-scrim" id="navScrim" hidden></div>
+  <div class="nav-drawer" id="navDrawer" hidden>
+    <button class="drawer-close" id="navDrawerClose">✕</button>
+    <a href="#services" class="nav-drawer-link" data-scroll="1">Услуги</a>
+    <a href="#process" class="nav-drawer-link" data-scroll="2">Процесс</a>
+    <a href="#results" class="nav-drawer-link" data-scroll="3">Результаты</a>
+    <a href="#packages" class="nav-drawer-link" data-scroll="4">Пакеты</a>
+    <a href="#contact" class="nav-drawer-link" data-scroll="5">Контакты</a>
+    <a href="tel:+79001234567" class="drawer-phone">📞 +7 (900) 123-45-67</a>
+  </div>
+
+  <!-- ========= UI LAYER ========= -->
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- ========= HERO ========= -->
+      <section class="page" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <div class="hero-badge reveal-3d">Премиальный детейлинг • Пятигорск</div>
+          <h1 class="hero-title gsap-title reveal-3d">
+            ELITE<br>
+            <span class="accent-text">DETAILING</span>
+          </h1>
+          <p class="hero-desc reveal-3d">
+            Защитим и преобразим ваш автомобиль. Керамическое покрытие, полировка, PPF-плёнка и полная химчистка — от мастеров с 10-летним опытом.
+          </p>
+          <div class="hero-actions reveal-3d">
+            <a href="#contact" class="btn btn-primary" data-scroll="5">Записаться</a>
+            <a href="#services" class="btn btn-outline" data-scroll="1">Наши услуги</a>
+          </div>
+          <div class="hero-stats reveal-3d">
+            <div class="stat"><span class="stat-num counter" data-target="10">0</span><span class="stat-plus">+</span><span class="stat-label">Лет опыта</span></div>
+            <div class="stat"><span class="stat-num counter" data-target="3000">0</span><span class="stat-plus">+</span><span class="stat-label">Авто обслужено</span></div>
+            <div class="stat"><span class="stat-num counter" data-target="15">0</span><span class="stat-plus">+</span><span class="stat-label">Видов услуг</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= SERVICES ========= -->
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Что мы делаем</div>
+          <h2 class="section-title reveal-3d">Полный спектр<br><span class="accent-text">детейлинг-услуг</span></h2>
+          <p class="section-desc reveal-3d">От глубокой полировки до бронирования плёнкой — защита и эстетика вашего автомобиля на высшем уровне.</p>
+
+          <div class="services-grid">
+            <div class="service-card reveal-3d">
+              <div class="card-icon">💎</div>
+              <h3>Полировка кузова</h3>
+              <p>Абразивная и восстановительная полировка. Удаление царапин, голограмм, разводов. Зеркальный блеск как с завода.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🛡️</div>
+              <h3>Керамическое покрытие</h3>
+              <p>Нанокерамика 9H+ с гарантией до 5 лет. Гидрофобный эффект, защита от UV, химии и мелких царапин.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🎞️</div>
+              <h3>PPF-плёнка</h3>
+              <p>Полиуретановая бронеплёнка на кузов: защита от сколов, гравия и вандализма. Невидимый щит вашего авто.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🧽</div>
+              <h3>Химчистка салона</h3>
+              <p>Глубокая экстракторная химчистка кожи, ткани, потолка. Озонирование, устранение запахов. Салон как новый.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🔧</div>
+              <h3>Предпродажная подготовка</h3>
+              <p>Комплексная подготовка автомобиля к продаже: полировка, химчистка, устранение дефектов, керамика.</p>
+            </div>
+            <div class="service-card reveal-3d">
+              <div class="card-icon">🪟</div>
+              <h3>Тонировка стёкол</h3>
+              <p>Премиальные плёнки с защитой от ультрафиолета. Точный крой по лекалам, гарантия от пузырей.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PROCESS ========= -->
+      <section class="page" data-index="2" id="process">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Как мы работаем</div>
+          <h2 class="section-title reveal-3d">Процесс,<br><span class="accent-text">отточенный годами</span></h2>
+          <p class="section-desc reveal-3d">Каждый автомобиль проходит через чёткий протокол — от приёмки до финальной инспекции.</p>
+
+          <div class="process-grid">
+            <div class="process-step reveal-3d">
+              <div class="step-num">01</div>
+              <h4>Осмотр и диагностика</h4>
+              <p>Детальная оценка состояния ЛКП, салона и элементов кузова. Толщиномер, фонарь, протокол дефектов.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">02</div>
+              <h4>Мойка и деконтаминация</h4>
+              <p>Бесконтактная мойка, глина, ирон-ремувер, дегтярка. Полная очистка поверхности перед работой.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">03</div>
+              <h4>Коррекция и полировка</h4>
+              <p>2–3 этапа полировки: грубая коррекция → антиголограммная → финиш. Контроль под LED-панелью.</p>
+            </div>
+            <div class="process-step reveal-3d">
+              <div class="step-num">04</div>
+              <h4>Защитное покрытие</h4>
+              <p>Нанесение керамики / PPF-плёнки. Ламинарный бокс, контроль температуры, ИК-сушка для полимеризации.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= RESULTS ========= -->
+      <section class="page" data-index="3" id="results">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Доверие клиентов</div>
+          <h2 class="section-title reveal-3d">Результаты,<br><span class="accent-text">которые впечатляют</span></h2>
+          <p class="section-desc reveal-3d">Каждый проект — это трансформация. Цифры и отзывы говорят сами за себя.</p>
+
+          <div class="results-grid">
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="99">0</div>
+              <div class="result-suffix">%</div>
+              <div class="result-label">Клиентов возвращаются</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="3000">0</div>
+              <div class="result-suffix">+</div>
+              <div class="result-label">Автомобилей обработано</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num counter" data-target="5">0</div>
+              <div class="result-suffix">лет</div>
+              <div class="result-label">Гарантия на керамику</div>
+            </div>
+            <div class="result-card reveal-3d">
+              <div class="result-num">24/7</div>
+              <div class="result-label">Онлайн-запись</div>
+            </div>
+          </div>
+
+          <div class="testimonial reveal-3d">
+            <blockquote>
+              «Отдал свой BMW X5 на полный комплекс — полировка, керамика, химчистка. Забрал машину и не узнал — выглядит лучше, чем из салона. Однозначно лучший детейлинг в Пятигорске!»
+            </blockquote>
+            <div class="testimonial-author">
+              <span class="t-name">Артём В.</span>
+              <span class="t-role">BMW X5, постоянный клиент</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= PACKAGES ========= -->
+      <section class="page" data-index="4" id="packages">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Пакеты услуг</div>
+          <h2 class="section-title reveal-3d">Готовые<br><span class="accent-text">комплексные решения</span></h2>
+          <p class="section-desc reveal-3d">Выберите пакет или соберите индивидуальную программу — мы подберём оптимальное решение.</p>
+
+          <div class="packages-grid">
+            <div class="package-card reveal-3d">
+              <div class="package-tag">Базовый</div>
+              <h3>CLEAN</h3>
+              <div class="package-price">от 8 000 ₽</div>
+              <ul>
+                <li>Бесконтактная мойка</li>
+                <li>Чистка дисков и арок</li>
+                <li>Химчистка салона</li>
+                <li>Кондиционер кожи</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-sm" data-scroll="5">Записаться</a>
+            </div>
+            <div class="package-card package-featured reveal-3d">
+              <div class="package-tag">Популярный</div>
+              <h3>CERAMIC PRO</h3>
+              <div class="package-price">от 25 000 ₽</div>
+              <ul>
+                <li>Полировка 2-этапная</li>
+                <li>Керамика 9H+ (3 слоя)</li>
+                <li>Химчистка салона</li>
+                <li>Гидрофоб на стёкла</li>
+                <li>Гарантия 3 года</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary btn-sm" data-scroll="5">Записаться</a>
+            </div>
+            <div class="package-card reveal-3d">
+              <div class="package-tag">Максимальный</div>
+              <h3>FULL ARMOR</h3>
+              <div class="package-price">от 80 000 ₽</div>
+              <ul>
+                <li>PPF-плёнка полный кузов</li>
+                <li>Керамика поверх плёнки</li>
+                <li>Полировка + химчистка</li>
+                <li>Тонировка стёкол</li>
+                <li>Гарантия 5 лет</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline btn-sm" data-scroll="5">Записаться</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========= CONTACT ========= -->
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="badge reveal-3d">Запись</div>
+          <h2 class="section-title reveal-3d">Запишите авто на<br><span class="accent-text">детейлинг сегодня</span></h2>
+          <p class="section-desc reveal-3d">Оставьте заявку — мы перезвоним, обсудим детали и подберём удобное время.</p>
+
+          <div class="contact-grid">
+            <form class="contact-form reveal-3d" id="contactForm" onsubmit="return false;">
+              <input type="text" id="formName" placeholder="Ваше имя" required>
+              <input type="tel" id="formPhone" placeholder="Телефон / WhatsApp" required>
+              <select id="formService">
+                <option value="">Интересующая услуга</option>
+                <option>Полировка кузова</option>
+                <option>Керамическое покрытие</option>
+                <option>PPF-плёнка</option>
+                <option>Химчистка салона</option>
+                <option>Тонировка</option>
+                <option>Комплексный пакет</option>
+              </select>
+              <input type="text" id="formCar" placeholder="Марка и модель авто">
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                <span id="submitText">Записаться на детейлинг →</span>
+              </button>
+            </form>
+
+            <div class="contact-info reveal-3d">
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <div>
+                  <strong>Адрес</strong>
+                  <p>г. Пятигорск, промзона</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">📞</span>
+                <div>
+                  <strong>Телефон</strong>
+                  <p><a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">💬</span>
+                <div>
+                  <strong>Мессенджеры</strong>
+                  <div class="social-links">
+                    <a href="#" class="social-btn">WhatsApp</a>
+                    <a href="#" class="social-btn">Telegram</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                  </div>
+                </div>
+              </div>
+              <div class="info-item">
+                <span class="info-icon">🕐</span>
+                <div>
+                  <strong>Время работы</strong>
+                  <p>Пн–Сб: 9:00 – 20:00</p>
+                  <p>Вс: по записи</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <p>© 2026 Elite Detailing — Премиальный автодетейлинг, Пятигорск</p>
+        </footer>
+      </section>
+
+    </div><!-- /.stage -->
+  </div><!-- /#ui-layer -->
+
+  <!-- ========= CURSOR GLOW ========= -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
