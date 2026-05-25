@@ -1,4 +1,4 @@
-/* ======================================================
+﻿/* ======================================================
    ELITE DETAILING — Design System (Cinematic Scroll)
    Palette: Deep navy, electric blue, chrome silver
    TEXT MANIFESTO: Solid fill + outside-only shadow
@@ -230,7 +230,7 @@ a:hover { color: var(--blue-light); }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
   font-weight: 400;
   line-height: 1.0;
   margin-bottom: 20px;
@@ -576,7 +576,7 @@ a:hover { color: var(--blue-light); }
 
   .hero-stats { gap: 24px; }
   .stat-num { font-size: 1.8rem; }
-  .hero-title { font-size: 3rem; letter-spacing: 4px; }
+  .hero-title { font-size: 1.5rem; letter-spacing: 4px; }
   .section-title { font-size: 1.8rem; }
 }
 
