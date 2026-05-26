@@ -353,7 +353,7 @@ a:hover { color: var(--blue-light); }
 }
 
 /* ======== SERVICES GRID ======== */
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 20px; }
 
 .service-card {
   background: var(--card-bg);
